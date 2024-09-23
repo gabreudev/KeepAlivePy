@@ -35,7 +35,7 @@ def run_schedule():
         time.sleep(1)
 
 # Rota Flask para verificar o status da última requisição
-@app.route('/', methods=['GET'])
+@app.route('/status', methods=['GET'])
 def status():
     if last_status is not None and last_request_time is not None:
         return jsonify({
