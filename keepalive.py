@@ -26,11 +26,12 @@ def keep_alive():
         print(f"Erro ao tentar fazer o ping: {str(e)}")
 
 # Agendar para rodar a cada 5 minutos
-schedule.every(5).minutes.do(keep_alive)
+schedule.every(14).minutes.do(keep_alive)
 
 # Função que roda o agendamento em segundo plano
 def run_schedule():
     while True:
+        print("requisicao feita")
         schedule.run_pending()
         time.sleep(1)
 
