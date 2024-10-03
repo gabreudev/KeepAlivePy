@@ -1,14 +1,14 @@
 {
     "builds":[
         {
-            "src": "run.py",
+            "src": "keepalive.py",
             "use": "@vercel/python"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "run.py"
+            "dest": "keepalive.py"
         }
     ]
 }
