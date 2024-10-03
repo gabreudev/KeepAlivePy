@@ -48,6 +48,9 @@ def status():
             "message": "Nenhuma requisição feita ainda."
         })
 
+@app.route('/', methods=['GET'])
+def home():
+    return "is working"
 # Iniciar o agendamento em uma thread separada
 if __name__ == '__main__':
     t = threading.Thread(target=run_schedule)
